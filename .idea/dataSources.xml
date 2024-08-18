@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="quote_editor_development@localhost" uuid="7775aeb1-e1fa-4072-9b98-f12e59203120">
+    <data-source source="LOCAL" name="1@localhost" uuid="0dd8e05b-1e22-4675-a9f8-af85bb854cdb">
+      <driver-ref>redis</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>jdbc.RedisDriver</jdbc-driver>
+      <jdbc-url>jdbc:redis://localhost:6379/1</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="database.redis.default.key.filter" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="quote_editor_development@localhost" uuid="4b7c5d12-ce38-4cba-a7c2-a55268bf1248">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

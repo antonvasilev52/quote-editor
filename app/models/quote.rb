@@ -3,6 +3,8 @@ class Quote < ApplicationRecord
 
   scope :ordered, -> { order(id: :desc) }
 
+  belongs_to :company
+
   # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self } }
   #  this ↑ is equivalent of after_create_commit -> { broadcast_prepend_to "quotes" }
 
@@ -20,6 +22,10 @@ class Quote < ApplicationRecord
 
   # Those three callbacks are equivalent to the following single line:
 
-  broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+  # broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+  # for each company to have its own stream, we'll update it to this:
+
+  broadcasts_to ->(quote) { [quote.company, "quotes"] }, inserts_by: :prepend
+
 
 end

@@ -3,4 +3,16 @@ class ApplicationController < ActionController::Base
   # and remove it when it has the expected styles
   # before_action -> { sleep 3 }
 
+
+
+  # Ensure our users are authenticated everywhere on the whole application
+  before_action :authenticate_user!, unless: :devise_controller?
+
+  private
+
+  def current_company
+    @current_company ||= current_user.company if user_signed_in?
+  end
+  helper_method :current_company
+
 end
