@@ -21,7 +21,7 @@ class QuotesController < ApplicationController
         format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }
       end
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
