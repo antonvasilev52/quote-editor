@@ -2,12 +2,15 @@
 
 first:
   company: kpmg
+  user: accountant
   name: First quote
 
 second:
   company: kpmg
+  user: accountant
   name: Second quote
 
 third:
   company: kpmg
+  user: accountant
   name: Third quote

@@ -3,6 +3,8 @@
     <%= link_to quote.name,
                 quote_path(quote),
                 data: { turbo_frame: "_top" } %>
+    <%= quote.created_at.strftime("%T %d %B %Y") %>
+    <%= quote.user.name %>
     <div class="quote__actions">
       <%= button_to "Delete",
                     quote_path(quote),

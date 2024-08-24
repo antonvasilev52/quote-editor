@@ -12,4 +12,6 @@ class User < ApplicationRecord
     email.split("@").first.capitalize
   end
 
+  has_many :quotes
+
 end

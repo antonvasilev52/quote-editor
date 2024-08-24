@@ -13,7 +13,8 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = current_company.quotes.build(quote_params)
+    @quote = current_user.quotes.build(quote_params)
+    @quote.company = current_company
 
     if @quote.save
       respond_to do |format|
