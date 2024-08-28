@@ -6,11 +6,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="current-user-id" content="<%= current_user.id %>">
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the current user ID from the meta tag
+            const currentUserId = document.querySelector('meta[name="current-user-id"]').getAttribute('content');
+
+            // Select the quote element
+            const quoteElement = document.querySelector('.quote');
+
+            // Get the author ID from the data attribute
+            const authorId = quoteElement.getAttribute('data-author-id');
+
+            // Compare the IDs and apply the class accordingly
+            if (currentUserId === authorId) {
+                quoteElement.classList.add('quote--mine');
+            } else {
+                quoteElement.classList.add('quote--his');
+            }
+        });
+    </script>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
   </head>
 
   <body>
+
   <%= render "layouts/navbar" %>
 
   <div id="flash" class="flash">

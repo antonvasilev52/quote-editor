@@ -20,4 +20,16 @@
     align-self: flex-start;
     gap: var(--space-xs);
   }
+
+  &--mine {
+    margin-left: 100px;
+    background-color: var(--color-secondary);
+  }
+
+  &--his {
+    margin-right: 100px;
+    background-color: var(--color-tertiary);
+  }
+
 }
+
