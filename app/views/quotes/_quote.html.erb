@@ -1,5 +1,7 @@
 <%= turbo_frame_tag quote do %>
-  <div class="quote" data-author-id=<%= quote.user.id %>>
+  <div class="quote"
+       data-author-id=<%= quote.user.id %>
+         data-controller="chat">
     <%= link_to quote.name,
                 quote_path(quote),
                 data: { turbo_frame: "_top" } %>
