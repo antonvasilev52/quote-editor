@@ -21,6 +21,10 @@
     gap: var(--space-xs);
   }
 
+  &__hidden {
+    display: none;
+  }
+
   &--mine {
     margin-left: 100px;
     background-color: var(--color-secondary);
