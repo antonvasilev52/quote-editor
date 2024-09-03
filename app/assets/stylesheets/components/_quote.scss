@@ -1,4 +1,5 @@
 .quote {
+  min-height: 4.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,10 +15,16 @@
     padding: var(--space-xs) var(--space-m);
   }
 
+  &__text {
+    display: inline-flex;
+    flex-grow: 8;
+  }
+
   &__actions {
-    display: flex;
+    visibility: hidden;
+    display: inline-flex;
     flex: 0 0 auto;
-    align-self: flex-start;
+    align-self: center;
     gap: var(--space-xs);
   }
 
@@ -28,6 +35,9 @@
   &--mine {
     margin-left: 100px;
     background-color: var(--color-secondary);
+    &:hover > div {
+      visibility: visible;
+    }
   }
 
   &--his {

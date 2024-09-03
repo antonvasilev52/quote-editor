@@ -69,4 +69,14 @@
       color: var(--color-white);
     }
   }
+
+  &--icon {
+    padding: var(--space-xxxs);
+  }
+}
+
+.icon {
+  fill: green;
+  width: 35px;
+  height: 35px;
 }
