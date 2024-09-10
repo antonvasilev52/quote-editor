@@ -2,7 +2,7 @@
   <div class="quote"
        data-author-id=<%= quote.user.id %>
          data-controller="chat">
-    <%= quote.user.name %>
+    <%= quote.user.name %>:
     <div class="quote__text">
       <%= link_to quote.name,
                   quote_path(quote),
@@ -21,7 +21,7 @@
 
     </div>
     <div class="quote__time">
-      <%= quote.created_at.strftime("%T") %>
+      <%= local_time(quote.created_at, '%H:%M:%S') %>
     </div>
   </div>
 

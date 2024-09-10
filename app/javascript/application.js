@@ -1,4 +1,6 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
 import "./controllers"
-Turbo.start()
+import LocalTime from "local-time"
+
+LocalTime.start()

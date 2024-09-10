@@ -58,6 +58,9 @@ gem "bootsnap", require: false
 
 gem 'evil_icons'
 
+# to get message time in user's timezone
+gem 'local_time'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
