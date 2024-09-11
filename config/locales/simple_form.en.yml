@@ -2,7 +2,11 @@ en:
   simple_form:
     placeholders:
       quote:
-        name: Name of your quote
+        name: Type your message
+      user:
+        email: 'Email'
+        username: 'Your username'
+        password: 'Password'
     labels:
       quote:
         name: Name
