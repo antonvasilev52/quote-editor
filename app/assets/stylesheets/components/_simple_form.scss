@@ -1,16 +1,18 @@
-.simple_form.new_user {
-  margin: 0 auto;
+.simple_form {
+  &.new_user {
+    margin: 0 auto;
 
-
-  .form__group {
-    margin: var(--space-l);
-    font-size: var(--font-size-l);
-
+      .form__group {
+        margin: var(--space-l);
+        font-size: var(--font-size-l);
+      }
   }
-
-
 }
 
 h2 {
   margin: 0 auto;
+}
+
+.simple_form.quote.form {
+  background-color: Bisque;
 }

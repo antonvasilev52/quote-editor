@@ -1,6 +1,5 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
-  before_action :set_current_user
 
   def index
     @quotes = current_company.quotes.ordered
@@ -60,8 +59,5 @@ class QuotesController < ApplicationController
     params.require(:quote).permit(:name)
   end
 
-  def set_current_user
-    Current.user = current_user
-  end
 
 end

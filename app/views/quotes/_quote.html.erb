@@ -4,9 +4,7 @@
          data-controller="chat">
     <%= quote.user.name %>:
     <div class="quote__text">
-      <%= link_to quote.name,
-                  quote_path(quote),
-                  data: { turbo_frame: "_top" } %>
+      <%=  quote.name %>
     </div>
     <div class="quote__actions">
       <%= button_to quote_path(quote),
@@ -20,7 +18,14 @@
       <% end %>
 
     </div>
+
     <div class="quote__time">
+      <% if quote.updated_at != quote.created_at %>
+        <span class="quote__edited">
+        <%= "Edited" %>
+        </span>
+        <br>
+      <% end %>
       <%= local_time(quote.created_at, '%H:%M:%S') %>
     </div>
   </div>

@@ -1,4 +1,5 @@
 .quote {
+  opacity: 0.9;
   min-height: 4.5em;
   display: flex;
   justify-content: space-between;
@@ -7,7 +8,7 @@
 
   background-color: var(--color-white);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow-large);
   margin-bottom: var(--space-m);
   padding: var(--space-xs);
 
@@ -16,6 +17,7 @@
   }
 
   &__text {
+    color: DimGray;
     display: inline-flex;
     flex-grow: 8;
   }
@@ -28,21 +30,30 @@
     gap: var(--space-xs);
   }
 
+  &__time {
+    align-self: flex-end;
+  }
+
+  &__edited {
+    align-self: start;
+    color: black;
+  }
+
   &__hidden {
     display: none;
   }
 
   &--mine {
-    margin-left: 100px;
-    background-color: var(--color-secondary);
+    margin-left: 200px;
+    background-color: Bisque;
     &:hover > div {
       visibility: visible;
     }
   }
 
   &--his {
-    margin-right: 100px;
-    background-color: var(--color-tertiary);
+    margin-right: 200px;
+    background-color: BurlyWood;
   }
 
 }
