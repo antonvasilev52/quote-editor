@@ -11,3 +11,4 @@ bundle exec rails assets:clean
 # Uncomment the following line:
 
 bundle exec rails db:migrate
+bin/rails db:fixtures:load
